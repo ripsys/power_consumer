@@ -156,7 +156,7 @@ def get_power_data (number_of_samples):
     return ch0_data, ch1_data, ch5_data
 
 
-for i in range(0,200):
+while True:
     
     for j in range(0, 200) :
         peak_array_V[j] = 0
@@ -226,7 +226,7 @@ for i in range(0,200):
     # Change the client IP address and user/password to match your instance of influxdb
     # Note that I have no user or password, place them in the quotes '' after port number
     # retries=0 means infinate attempts.
-    client = InfluxDBClient('localhost', 8086, '', '', 'ampread', timeout=60,retries=3)
+    client = InfluxDBClient('10.0.0.168', 8086, '', '', 'ampread', timeout=60,retries=3)
     try:
         client.create_database('ampread')
         client.write_points(json_amps)
@@ -249,7 +249,7 @@ for i in range(0,200):
         }
     ]
 
-    client = InfluxDBClient('localhost', 8086, '', '', 'ampread', timeout=60,retries=3)
+    client = InfluxDBClient('10.0.0.168', 8086, '', '', 'ampread', timeout=60,retries=3)
     try:
         client.create_database('ampread')
         client.write_points(json_misc)
@@ -257,7 +257,10 @@ for i in range(0,200):
         print('influxdb server not responding')
         continue
     
-    
+   
+   except KeyboardInterrupt:
+        print('You cancelled the operation.')
+        sys.exit()
     
     
     print ("U = ", round(U,2), "V" , "CT1 =", round(ct1_A,2), "A", "CT2 =", round(ct2_A,2), "A"  )
