@@ -1,0 +1,7 @@
+1. Update and upgrade your Pi
+apt update && upgrade
+2. Install Python 3.9 & pip
+Install Git
+Download the source code for this project
+Install the Python dependencies for the source code
+Install a specific kernel known to not exhibit the known SPI sampling rate issues.
