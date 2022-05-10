@@ -14,5 +14,6 @@ pip install influxdb
 pip install spidev
 pip install scipy
 pip install holidays
+pip install influxdb-client
 
 Install a specific kernel known to not exhibit the known SPI sampling rate issues.
