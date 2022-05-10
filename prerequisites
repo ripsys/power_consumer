@@ -13,5 +13,6 @@ git clone https://github.com/ripsys/power_consumer.git
 pip install influxdb
 pip install spidev
 pip install scipy
+pip install holidays
 
 Install a specific kernel known to not exhibit the known SPI sampling rate issues.
