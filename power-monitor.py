@@ -258,7 +258,7 @@ while True:
         continue
     
    
-   except KeyboardInterrupt:
+    except KeyboardInterrupt:
         print('You cancelled the operation.')
         sys.exit()
     
