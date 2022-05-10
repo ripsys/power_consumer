@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 from MCP3008 import MCP3008
 from math import sqrt
 from influxdb import InfluxDBClient
