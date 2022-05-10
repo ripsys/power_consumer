@@ -1,5 +1,6 @@
 1. Update and upgrade your Pi
 apt update && upgrade
+
 2. Install Python 3.9 & pip
 apt install python3 $$ python3-pip
 
